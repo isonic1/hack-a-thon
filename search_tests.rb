@@ -20,7 +20,7 @@ describe 'Search Tests' do
     expect(@page.get_number_of_visible_books).to eq 1
   end
 
-  it 'Validate Example.com' do |e|
+  it 'Search By Partial Title' do |e|
     @page.search("Test");
 
     expected_books = [
