@@ -1,4 +1,5 @@
 require 'eyes_selenium'
+require_relative '../resources/test_properties'
 
 #OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 #Applitools::EyesLogger.log_handler = Logger.new(STDOUT)
@@ -12,7 +13,7 @@ describe 'Search Tests' do
     
     conf = Applitools::Selenium::Configuration.new.tap do |config|
       config.server_url = "https://eyesapi.applitools.com"
-      config.api_key = ENV['APPLITOOLS_API_KEY']
+      config.api_key = API_KEY
       config.app_name = 'Demo Batch - Ultrafast - Selenium for Ruby'
       config.test_name = 'Smoke Test - Ultrafast - Selenium for Ruby'
       config.viewport_size = Applitools::RectangleSize.new(800, 600)
